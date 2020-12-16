@@ -1,0 +1,18 @@
+
+div.market {
+    height: 400px;
+    background-image: 
+        url("./../IMG/stand.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+div.troller {
+    height: 200px;
+    background-image: 
+        url("./../IMG/carrito.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
