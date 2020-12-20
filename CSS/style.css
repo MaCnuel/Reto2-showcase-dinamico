@@ -1,18 +1,83 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    
+}
+body>div:nth-child(2){
+    display:flex;
+    flex-direction: row; 
+    height: 200px;
+    min-width: 250px;
+
+}
+
 
 div.market {
-    height: 400px;
+    height: 300px;
+    min-width: 250px;
     background-image: 
         url("./../IMG/stand.jpg");
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: contain;
 }
 
-div.troller {
+.troller {
     height: 200px;
+    width: 50%;
     background-image: 
         url("./../IMG/carrito.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     background-size: contain;
+    
+}
+.empty{
+    width: 25%;
+}
+
+@media(min-width:250px){
+    div.market{
+        height: 300px;
+    }
+    body>div:nth-child(2){
+        height: 200px;
+    }
+}
+
+@media(min-width:300px){
+    div.market{
+        height: 400px;
+    }
+}
+
+@media (min-width: 434px){
+    .troller{
+        width:70%;
+        background-size: 200px;
+    }
+    .empty{
+        width: 15%;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        flex-direction: row;
+    }
+    div.market{
+        width: 60%;
+    }
+    body>div:nth-child(2){
+        display:flex;
+        flex-direction: row; 
+        width: 40%;
+        height: 400px;
+
+    }
+    .troller{
+        height: 400px;
+    }
+    
 }
