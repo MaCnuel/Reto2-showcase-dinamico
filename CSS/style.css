@@ -26,14 +26,14 @@ div.market {
 .troller {
     height: 200px;
     width: 50%;
-    background-image: 
-        url("./../IMG/carrito.png");
+    /*background-image: 
+        url("./../IMG/carrito.png");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     
 }
-.empty{
+.empty2{
     width: 25%;
 }
 
@@ -57,18 +57,26 @@ div.market {
         width:70%;
         background-size: 200px;
     }
-    .empty{
+    .empty2{
         width: 15%;
     }
 }
 
 @media (min-width: 768px){
+
     body{
-        flex-direction: row;
+        flex-direction: row; /* changing direction to showing in one line*/
+
     }
+
+    /**************MArket part****************/
     div.market{
         width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
+
     body>div:nth-child(2){
         display:flex;
         flex-direction: row; 
@@ -76,8 +84,86 @@ div.market {
         height: 400px;
 
     }
-    .troller{
-        height: 400px;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        padding: 15px;
+        width: 70px;
+        height: 70px;
+        background-image:  
+            url('./../IMG/caja.png');
+        background-size:100px;   
+        margin-top: 150px;
+    }
+
+    .apples {
+        width:22px;
+        height: 22px;
+    }
+
+    .oranges {
+        width:22px;
+        height: 22px;
+    }
+
+    .bannanas{ /*bannana box shall have its bannanas larger*/
+        width: 30px;
+        height:22px;
     }
     
+    #milkContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width:40px;
+        height: 100px;
+        background-size:50px;  
+        margin-top: 150px;
+    }
+    #milmilkContainer > div{
+        height: 40px;
+    }
+    .milks{
+        width:15px;
+        height: 60px;
+    }
+
+    /**************************************/
+
+    /*********Troller part**************/
+
+    .troller{
+        width: 70%;
+        height: 400px;
+    }
+    .empty2{
+        width:15%;
+    }
+    .innerTroller{
+        margin-top:140px;
+        margin-bottom: 180px;
+        margin-left: 10px;
+        width: 120px;
+        height:80px;
+
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+    }
+    .image{
+        height: 400px;
+        width: 1px;
+        display: flex;
+        align-items: center;
+
+    }
+    .image>img{
+        width: 200px;
+    }
+    
+    .troller>img{
+        width:22px;
+        height: 22px;
+    }
 }
