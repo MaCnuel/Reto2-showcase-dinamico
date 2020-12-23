@@ -4,18 +4,49 @@ body{
     justify-content:space-evenly;
     
 }
-body>div:nth-child(2){
-    display:flex;
-    flex-direction: row; 
-    height: 200px;
-    min-width: 250px;
 
+.apples {
+    width:16px;
+    height: 16px;
 }
 
+.oranges {
+    width:16px;
+    height: 16px;
+}
+
+.bannanas{ /*bannana box shall have its bannanas larger*/
+    width: 22px;
+    height:16px;
+}
+
+.milks{
+    width:12px;
+    height: 30px;
+}
+#milkContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width:40px;
+    height: 80px;
+    background-size:50px;  
+    margin-top: 110px;
+}
+#milmilkContainer > img{
+    height: 40px;
+}
+
+/*****************Market part**********************/
 
 div.market {
     height: 300px;
-    min-width: 250px;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     background-image: 
         url("./../IMG/stand.jpg");
     background-repeat: no-repeat;
@@ -23,43 +54,52 @@ div.market {
     background-size: contain;
 }
 
+.container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    background-image:  
+        url('./../IMG/caja.png');
+    background-size:80px;   
+    margin-top: 110px;
+}
+
+/********************Troller part******************/
+
+body>div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+.trollerPart{
+    display:grid;
+    grid-template-columns: 1fr 150px 1fr;
+    height: 200px;
+    min-width: 300px;
+    width:100%
+
+}
 .troller {
     height: 200px;
-    width: 50%;
-    /*background-image: 
-        url("./../IMG/carrito.png");*/
+    background-image: 
+        url("./../IMG/carrito.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     
 }
-.empty2{
-    width: 25%;
-}
+.innerTroller{
+    margin-top:60px;
+    margin-bottom: 80px;
+    margin-left: 5%;
+    width: 80px;
+    height:60px;
 
-@media(min-width:250px){
-    div.market{
-        height: 300px;
-    }
-    body>div:nth-child(2){
-        height: 200px;
-    }
-}
+    display: flex;
+    flex-wrap: wrap-reverse;
 
-@media(min-width:300px){
-    div.market{
-        height: 400px;
-    }
-}
-
-@media (min-width: 434px){
-    .troller{
-        width:70%;
-        background-size: 200px;
-    }
-    .empty2{
-        width: 15%;
-    }
 }
 
 @media (min-width: 768px){
@@ -69,99 +109,69 @@ div.market {
 
     }
 
-    /**************MArket part****************/
-    div.market{
-        width: 60%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    body>div:nth-child(2){
-        display:flex;
-        flex-direction: row; 
-        width: 40%;
-        height: 400px;
-
-    }
-
-    .container{
-        display: flex;
-        flex-wrap: wrap-reverse;
-        padding: 15px;
-        width: 70px;
-        height: 70px;
-        background-image:  
-            url('./../IMG/caja.png');
-        background-size:100px;   
-        margin-top: 150px;
-    }
-
     .apples {
         width:22px;
         height: 22px;
     }
-
+    
     .oranges {
         width:22px;
         height: 22px;
     }
-
+    
     .bannanas{ /*bannana box shall have its bannanas larger*/
         width: 30px;
         height:22px;
     }
     
-    #milkContainer{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        width:40px;
-        height: 100px;
-        background-size:50px;  
-        margin-top: 150px;
-    }
-    #milmilkContainer > div{
+    .milks{
+        width:16px;
         height: 40px;
     }
-    .milks{
-        width:15px;
-        height: 60px;
+
+    /**************MArket part****************/
+    div.market{
+        width: 60%;
+        height: 400px;
+    }
+
+    .container{
+        width: 75px;
+        height: 75px;
+        background-size:105px;   
+        margin-top: 145px;
+    }
+
+    #milkContainer{
+        width:45px;
+        height: 80px;
+        background-size:50px;  
+        margin-top: 170px;
     }
 
     /**************************************/
 
     /*********Troller part**************/
 
-    .troller{
-        width: 70%;
+    .trollerPart{
+        display:grid;
+        grid-template-columns: 1fr 200px 1fr;
+        width: 40%;
         height: 400px;
+
     }
-    .empty2{
-        width:15%;
+
+    .troller{
+        height: 400px;
     }
     .innerTroller{
-        margin-top:140px;
-        margin-bottom: 180px;
-        margin-left: 10px;
-        width: 120px;
-        height:80px;
-
-        display: flex;
-        flex-wrap: wrap-reverse;
-
+        margin-top:150px;
+        margin-bottom: 175px;
+        margin-left: 5%;
+        width: 110px;
+        height: 75px;
     }
-    .image{
-        height: 400px;
-        width: 1px;
-        display: flex;
-        align-items: center;
 
-    }
-    .image>img{
-        width: 200px;
-    }
-    
     .troller>img{
         width:22px;
         height: 22px;

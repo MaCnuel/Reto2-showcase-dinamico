@@ -7,27 +7,25 @@
     <title>Reto 2. Showcase Dinámico</title>
 </head>
 <body>
-    <div class="market">
+    <div class="market"> <!-- All repetitive code generated on main.js-->
         <div class="container" id="appleContainer" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>  
         <div class="container" id="orangeContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div class="container" id="bannanaContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="milkContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div></div> <!--empty div-->
-            <img class='milkBottles' src="./IMG/leche.png" id='milk1' alt="milk" draggable="true" ondragstart="drag(event)">
-            <img class='milkBottles' src="./IMG/leche.png" id='milk2' alt="milk" draggable="true" ondragstart="drag(event)">
         </div>
     </div>
     <div>
-        <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-
-        <div class='image'>
-            <img src="./IMG/carrito.png" alt="">
-        </div><!--IMG div for readjustment of the background image of 'troller'-->
-        <div class='troller'>
-            <div class='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class='trollerPart'>
+            <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
+            <div class='troller'>
+                <div class='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
+                </div>
+            </div>
+            <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
+        </div>  
+        <div class="buttons">
+            <button>hola</button>
         </div>
-        </div>
-        <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
     </div>
     
     <script src="js/main.js"></script>
