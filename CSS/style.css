@@ -24,18 +24,6 @@ body{
     width:12px;
     height: 30px;
 }
-#milkContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    width:40px;
-    height: 80px;
-    background-size:50px;  
-    margin-top: 110px;
-}
-#milmilkContainer > img{
-    height: 40px;
-}
 
 /*****************Market part**********************/
 
@@ -66,6 +54,16 @@ div.market {
     margin-top: 110px;
 }
 
+#milkContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width:40px;
+    height: 80px;
+    background-size:50px;  
+    margin-top: 110px;
+}
+
 /********************Troller part******************/
 
 body>div:nth-child(2){
@@ -90,7 +88,7 @@ body>div:nth-child(2){
     background-size: contain;
     
 }
-.innerTroller{
+#innerTroller{
     margin-top:60px;
     margin-bottom: 80px;
     margin-left: 5%;
@@ -100,6 +98,30 @@ body>div:nth-child(2){
     display: flex;
     flex-wrap: wrap-reverse;
 
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons > button{
+    margin:0 10px;
+    padding:12px;
+    border: none;
+    background-color: blue;
+    color:white;
+}
+
+.buttons > button:hover {
+    background-color:lightblue;
+    color:rgb(20, 20, 20);
+    font-weight: bold;
+    border: 1px solid rgb(20, 20, 20);
+}
+
+.buttons > button:on-mouse-out {
+    border: none;
 }
 
 @media (min-width: 768px){
@@ -157,16 +179,16 @@ body>div:nth-child(2){
         display:grid;
         grid-template-columns: 1fr 200px 1fr;
         width: 40%;
-        height: 400px;
+        height: 300px;
 
     }
 
     .troller{
-        height: 400px;
+        height: 300px;
     }
-    .innerTroller{
-        margin-top:150px;
-        margin-bottom: 175px;
+    #innerTroller{
+        margin-top:100px;
+        margin-bottom: 125px;
         margin-left: 5%;
         width: 110px;
         height: 75px;

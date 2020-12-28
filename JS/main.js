@@ -1,9 +1,6 @@
-
 /************************************************/
-/***************Filling the market***************/
-/************************************************/
-
 /***************Defining classes*****************/
+/************************************************/
 
 const Products = [['apple', 3, 10], ['orange', 4, 10], [ 'bannana', 2, 8],['milk',2,20, 1]];
 
@@ -28,7 +25,13 @@ const orangeClass = new Fruit(Products[1,0],Products[1,1], Products[1,2]);
 const bannanaClass = new Fruit(Products[2,0],Products[2,1], Products[2,2]);
 const milkClass = new Product(Products[3,0],Products[3,1], Products[3,2], Products[3,3]);
 
-/***************Filling the HTML*****************/
+/************************************************/
+/*****************FUNCTIONS**********************/
+/************************************************/
+
+/***************Filling the market***************/
+
+/* As a repetitive stuff on the html document, we choose to fill the market in here*/
 
 const FillMarketHTML = (product, number) => {
     return `
@@ -51,11 +54,9 @@ function renderBoxes(productMatrix) {
 }
 renderBoxes(Products);
 
-
-
 /************************************************/
-/*****************FUNCTIONS**********************/
-/************************************************/
+
+/****************Drag & Drop********************/
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -68,5 +69,55 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    ev.target.appendChild(document.getElementById(data))
+
+    dragAndDropElement(data,ev.target.id);
+}
+
+/************************************************/
+
+/*****************Clean Button Functions*********/
+
+let cleanProcess = () => {
+    document.querySelector('#innerTroller').innerHTML="";
+    return new Promise(function (resolve, reject){
+        resolve(`${alll} Troller empty`);
+        reject('Error');
+    })
+}
+
+async function cleanTroller() {
+    renderBoxes(Products);
+    var cleaning = await cleanProcess();
+    console.log(cleaning);
+}
+
+/************************************************/
+
+/******************Prices Functions*************/
+
+let countElements = (element) => {
+
+    /*Generating the product table of the inner products in your troller*/
+    const productTable =[];
+    for(const product of Products){
+        var productQtyInTroller = document.getElementById('innerTroller').getElementsByClassName(`${product[0]}s`).length; 
+        //Qty of Product "i" in innerTroller
+        productTable.push([product[0],productQtyInTroller]); //Table of Products inside the troller
+    }
+    return new Promise ((res, rej) => {
+        res(`A ${element} added to your cart`); 
+    })
+}
+
+async function dragAndDropElement (element, container){
+    switch (container){
+        case 'innerTroller':
+            try {
+                var newHTML = await countElements(element);
+                alert (newHTML);
+            } catch (error) {
+                return error;
+            }
+    }
 }
