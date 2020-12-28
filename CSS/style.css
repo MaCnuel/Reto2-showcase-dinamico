@@ -1,6 +1,7 @@
 body{
     display:flex;
     flex-direction: column;
+    align-items: center;
     justify-content:space-evenly;
     
 }
@@ -66,7 +67,13 @@ div.market {
 
 /********************Troller part******************/
 
-body>div:nth-child(2){
+body>div:nth-child(2){ /*this is the troller & pricelist part*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trollerAndButtonsPart {
     display: flex;
     flex-direction: column;
 }
@@ -124,7 +131,36 @@ body>div:nth-child(2){
     border: none;
 }
 
-@media (min-width: 768px){
+/*******************Table Part*******************/
+table {
+    margin-top: 50px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+  
+td, th {
+    border: 1px solid blue;
+    text-align: left;
+    padding: 8px;
+}
+  
+tbody:nth-child(even){
+    background-color:lightblue;
+}
+
+
+@media (min-width:600px) {
+    body>div:nth-child(2){ /*this is the troller & pricelist part*/
+        display: flex;
+        flex-direction: row;
+    }
+
+    table{
+        margin: 20px;
+    }
+
+}
+@media (min-width: 980px){
 
     body{
         flex-direction: row; /* changing direction to showing in one line*/

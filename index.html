@@ -15,25 +15,28 @@
         </div>
     </div>
     <div>
-        <div class='trollerPart'>
-            <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-            <div class='troller'>
-                <div id='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class='trollerAndButtonsPart'>
+            <div class='trollerPart'>
+                <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
+                <div class='troller'>
+                    <div id='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
                 </div>
+                <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
+            </div>  
+            <div class="buttons">
+                <button>SHOP NOW!</button>
+                <button onclick="cleanTroller()">CLEAN  TROLLER</button>
             </div>
-            <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-        </div>  
-        <div class="buttons">
-            <button>SHOP NOW!</button>
-            <button onclick="cleanTroller()">CLEAN TROLLER</button>
+        </div>
+        <div id="Prices">
+            <table id='pricesTable'>
+    
+            </table>
         </div>
     </div>
 
-    <div id="Prices">
-        <table id='pricesTable'>
 
-        </table>
-    </div>
     
     <script src="js/main.js"></script>
 </body>
