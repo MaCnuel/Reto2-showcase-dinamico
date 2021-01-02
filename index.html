@@ -18,14 +18,15 @@
         <div class='trollerAndButtonsPart'>
             <div class='trollerPart'>
                 <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-                <div class='troller'>
+                <div id='troller'>
                     <div id='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
                 </div>
                 <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
             </div>  
             <div class="buttons">
-                <button>SHOP NOW!</button>
+                
+                <button onclick="openShopPage()">SHOP NOW!</button>
                 <button onclick="cleanTroller()">CLEAN  TROLLER</button>
             </div>
         </div>
@@ -38,6 +39,6 @@
 
 
     
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

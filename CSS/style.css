@@ -86,7 +86,7 @@ body>div:nth-child(2){ /*this is the troller & pricelist part*/
     width:100%
 
 }
-.troller {
+#troller {
     height: 200px;
     background-image: 
         url("./../IMG/carrito.png");
@@ -118,6 +118,7 @@ body>div:nth-child(2){ /*this is the troller & pricelist part*/
     border: none;
     background-color: blue;
     color:white;
+    cursor: pointer;
 }
 
 .buttons > button:hover {
@@ -219,7 +220,7 @@ tbody:nth-child(even){
 
     }
 
-    .troller{
+    #troller{
         height: 300px;
     }
     #innerTroller{
