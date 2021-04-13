@@ -7,38 +7,44 @@
     <title>Reto 2. Showcase Dinámico</title>
 </head>
 <body>
-    <div class="market"> <!-- All repetitive code generated on main.js-->
-        <div class="container" id="appleContainer" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>  
-        <div class="container" id="orangeContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div class="container" id="bannanaContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="milkContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
-        </div>
-    </div>
-    <div>
-        <div class='trollerAndButtonsPart'>
-            <div class='trollerPart'>
-                <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-                <div id='troller'>
-                    <div id='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
-                    </div>
-                </div>
-                <div class='empty2'></div> <!--Empty div for readjustment of the background image of 'troller'-->
-            </div>  
-            <div class="buttons">
-                
-                <button onclick="openShopPage()">SHOP NOW!</button>
-                <button onclick="cleanTroller()">CLEAN  TROLLER</button>
+    <div class="market_list">
+        <div class="market">
+            <!-- All repetitive code generated on main.js-->
+            <div class="container" id="appleContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="container" id="orangeContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="container" id="bannanaContainer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="milkContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
             </div>
         </div>
-        <div id="Prices">
-            <table id='pricesTable'>
-    
-            </table>
+        <div class="troller_prices_table">
+            <div class='trollerAndButtonsPart'>
+                <div class='trollerPart'>
+                    <div class='empty2'></div>
+                    <!--Empty div for readjustment of the background image of 'troller'-->
+                    <div id='troller'>
+                        <div id='innerTroller' ondrop="drop(event)" ondragover="allowDrop(event)">
+                        </div>
+                    </div>
+                    <div class='empty2'></div>
+                    <!--Empty div for readjustment of the background image of 'troller'-->
+                </div>
+                <div class="buttons">
+        
+                    <button onclick="openShopPage()">SHOP NOW!</button>
+                    <button onclick="cleanTroller()">CLEAN TROLLER</button>
+                </div>
+            </div>
+            <div id="Prices">
+                <table id='pricesTable'>
+        
+                </table>
+            </div>
         </div>
     </div>
+    <div class="payment">
+        <p>Hey</p>
+    </div>
 
-
-    
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

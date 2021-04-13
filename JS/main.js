@@ -84,6 +84,14 @@ function drop(ev) {
     dragAndDropElement(data);
 }
 
+async function dragAndDropElement (element){    
+    try {
+        await countElements(element); 
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 window.allowDrop = allowDrop;
 window.drag = drag;
 window.drop = drop;
@@ -108,17 +116,6 @@ async function cleanTroller() {
 }
 
 window.cleanTroller = cleanTroller; //globalizing the function
-
-
-async function dragAndDropElement (element){
-    //    element = element.removeCharAt(); //removing the last character from the fruit id (i.e. the number)
-    
-        try {
-            await countElements(element); 
-        } catch (error) {
-            console.error(error);
-        }
-    }
 
 /***********************************************/
 

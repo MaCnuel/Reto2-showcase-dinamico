@@ -53,7 +53,6 @@ async function FillCart(productsTable){
                                 <th></th>
                                 <th>${totalPrice} €</th>
                             </tr>`;
-    console.log(productTable);
 }
 
 let countElementOnCart = () => {
@@ -81,4 +80,8 @@ async function countElements(element) {
     });
 }
 
-export {countElements, FillCart, Products, productTable};
+const RenderCartShop = () => {
+    FillCart(productTable)
+}
+
+export {countElements, RenderCartShop, Products};

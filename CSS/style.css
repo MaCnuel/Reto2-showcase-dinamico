@@ -1,238 +1,234 @@
-body{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-evenly;
-    
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .apples {
-    width:16px;
-    height: 16px;
+	width: 16px;
+	height: 16px;
 }
 
 .oranges {
-    width:16px;
-    height: 16px;
+	width: 16px;
+	height: 16px;
 }
 
-.bannanas{ /*bannana box shall have its bannanas larger*/
-    width: 22px;
-    height:16px;
+.bannanas {
+	/*bannana box shall have its bannanas larger*/
+	width: 22px;
+	height: 16px;
 }
 
-.milks{
-    width:12px;
-    height: 30px;
+.milks {
+	width: 12px;
+	height: 30px;
 }
 
 /*****************Market part**********************/
 
+.market_list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
 div.market {
-    height: 300px;
-    min-width: 300px;
+	height: 300px;
+	min-width: 300px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 
-    background-image: 
-        url("./../IMG/stand.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+	background-image: url("./../IMG/stand.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
-.container{
-    display: flex;
-    flex-wrap: wrap-reverse;
-    padding: 15px;
-    width: 50px;
-    height: 50px;
-    background-image:  
-        url('./../IMG/caja.png');
-    background-size:80px;   
-    margin-top: 110px;
+.container {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
+	background-image: url("./../IMG/caja.png");
+	background-size: 80px;
+	margin-top: 110px;
 }
 
-#milkContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    width:40px;
-    height: 80px;
-    background-size:50px;  
-    margin-top: 110px;
+#milkContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	width: 40px;
+	height: 80px;
+	background-size: 50px;
+	margin-top: 110px;
 }
 
 /********************Troller part******************/
 
-body>div:nth-child(2){ /*this is the troller & pricelist part*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .trollerAndButtonsPart {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.trollerPart{
-    display:grid;
-    grid-template-columns: 1fr 150px 1fr;
-    height: 200px;
-    min-width: 300px;
-    width:100%
-
+.trollerPart {
+	display: grid;
+	grid-template-columns: 1fr 150px 1fr;
+	height: 200px;
+	min-width: 300px;
+	width: 100%;
 }
 #troller {
-    height: 200px;
-    background-image: 
-        url("./../IMG/carrito.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    
+	height: 200px;
+	background-image: url("./../IMG/carrito.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
-#innerTroller{
-    margin-top:60px;
-    margin-bottom: 80px;
-    margin-left: 5%;
-    width: 80px;
-    height:60px;
+#innerTroller {
+	margin-top: 60px;
+	margin-bottom: 80px;
+	margin-left: 5%;
+	width: 80px;
+	height: 60px;
 
-    display: flex;
-    flex-wrap: wrap-reverse;
-
+	display: flex;
+	flex-wrap: wrap-reverse;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
-.buttons > button{
-    margin:0 10px;
-    padding:12px;
-    border: none;
-    background-color: blue;
-    color:white;
-    cursor: pointer;
+.buttons > button {
+	margin: 0 10px;
+	padding: 12px;
+	border: none;
+	background-color: blue;
+	color: white;
+	cursor: pointer;
 }
 
 .buttons > button:hover {
-    background-color:lightblue;
-    color:rgb(20, 20, 20);
-    font-weight: bold;
-    border: 1px solid rgb(20, 20, 20);
+	background-color: lightblue;
+	color: rgb(20, 20, 20);
+	font-weight: bold;
+	border: 1px solid rgb(20, 20, 20);
 }
 
 .buttons > button:on-mouse-out {
-    border: none;
+	border: none;
 }
 
 /*******************Table Part*******************/
 table {
-    margin-top: 50px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-}
-  
-td, th {
-    border: 1px solid blue;
-    text-align: left;
-    padding: 8px;
-}
-  
-tbody:nth-child(even){
-    background-color:lightblue;
+	margin-top: 50px;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
 }
 
-
-@media (min-width:600px) {
-    body>div:nth-child(2){ /*this is the troller & pricelist part*/
-        display: flex;
-        flex-direction: row;
-    }
-
-    table{
-        margin: 20px;
-    }
-
+td,
+th {
+	border: 1px solid blue;
+	text-align: left;
+	padding: 8px;
 }
-@media (min-width: 980px){
 
-    body{
-        flex-direction: row; /* changing direction to showing in one line*/
+tbody:nth-child(even) {
+	background-color: lightblue;
+}
 
-    }
+@media (min-width: 600px) {
+	.troller_prices_table {
+		display: flex;
+		flex-direction: row;
+	}
 
-    .apples {
-        width:22px;
-        height: 22px;
-    }
-    
-    .oranges {
-        width:22px;
-        height: 22px;
-    }
-    
-    .bannanas{ /*bannana box shall have its bannanas larger*/
-        width: 30px;
-        height:22px;
-    }
-    
-    .milks{
-        width:16px;
-        height: 40px;
-    }
+	table {
+		margin: 20px;
+	}
+}
+@media (min-width: 980px) {
+	.apples {
+		width: 22px;
+		height: 22px;
+	}
 
-    /**************MArket part****************/
-    div.market{
-        width: 60%;
-        height: 400px;
-    }
+	.oranges {
+		width: 22px;
+		height: 22px;
+	}
 
-    .container{
-        width: 75px;
-        height: 75px;
-        background-size:105px;   
-        margin-top: 145px;
-    }
+	.bannanas {
+		/*bannana box shall have its bannanas larger*/
+		width: 30px;
+		height: 22px;
+	}
 
-    #milkContainer{
-        width:45px;
-        height: 80px;
-        background-size:50px;  
-        margin-top: 170px;
-    }
+	.milks {
+		width: 16px;
+		height: 40px;
+	}
 
-    /**************************************/
+	.market_list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
 
-    /*********Troller part**************/
+	/**************MArket part****************/
+	div.market {
+		width: 60%;
+		height: 400px;
+	}
 
-    .trollerPart{
-        display:grid;
-        grid-template-columns: 1fr 200px 1fr;
-        width: 40%;
-        height: 300px;
+	.container {
+		width: 75px;
+		height: 75px;
+		background-size: 105px;
+		margin-top: 145px;
+	}
 
-    }
+	#milkContainer {
+		width: 45px;
+		height: 80px;
+		background-size: 50px;
+		margin-top: 170px;
+	}
 
-    #troller{
-        height: 300px;
-    }
-    #innerTroller{
-        margin-top:100px;
-        margin-bottom: 125px;
-        margin-left: 5%;
-        width: 110px;
-        height: 75px;
-    }
+	/**************************************/
 
-    .troller>img{
-        width:22px;
-        height: 22px;
-    }
+	/*********Troller part**************/
+
+	.trollerPart {
+		display: grid;
+		grid-template-columns: 1fr 200px 1fr;
+		width: 40%;
+		height: 300px;
+	}
+
+	#troller {
+		height: 300px;
+	}
+	#innerTroller {
+		margin-top: 100px;
+		margin-bottom: 125px;
+		margin-left: 5%;
+		width: 110px;
+		height: 75px;
+	}
+
+	.troller > img {
+		width: 22px;
+		height: 22px;
+	}
 }

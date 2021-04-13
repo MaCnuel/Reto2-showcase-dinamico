@@ -6,7 +6,6 @@
   });
 */
 
-import {FillCart, productTable} from './module.js'
+import {RenderCartShop} from './module.js'
 
-console.log(productTable);
-FillCart(productTable);
+RenderCartShop()
