@@ -30,7 +30,7 @@
                 </div>
                 <div class="buttons">
         
-                    <button onclick="openShopPage()">SHOP NOW!</button>
+                    <button onclick="AddressAndPaymentShow()">SHOP NOW!</button>
                     <button onclick="cleanTroller()">CLEAN TROLLER</button>
                 </div>
             </div>
@@ -41,11 +41,11 @@
             </div>
         </div>
     </div>
-    <div class="payment">
+    <div class="addressandpayment">
         <!-- Hidden div to put all forms for address and payment -->
-        <p>Hey</p>
-        <section id="address">
-            <form action="/submit">
+        <p>Please Submit Address and Payment Method</p>
+        <form action="/submit">
+            <section id="address">            
                 <label for="name">Name</label>
                 <input type="text" name="name" placeholder="Enter your name">
                 <label for="address">Address</label>
@@ -53,16 +53,34 @@
                 <label for="city">City</label>
                 <input type="text" name="city" placeholder="Enter your city">
                 <label for="zip-code">Zip-Code</label>
-                <input type="number" name="zip-code" placeholder="12345">
+                <input type="number" name="zip-code" id="zip-code" placeholder="12345">           
+            </section>
+            <section id="payment">
                 <div>
-                    <button type="submit">Send</button>
+                    <label for="card-number">Card Number</label>
+                    <input type="number" name="card-number" placeholder="12345">
+                    <label for="card-CVC">CVC</label>
+                    <input type="number" id="CVC" name="card-CVC" max="999" size="3"
+                        onChange="if(this.value>999){this.value='999';}else if(this.value<0){this.value='0';}">
+                </div> 
+                <div id="radio-buttons">
+                    <div>
+                        <input type="radio" id="visa" name="card-type">
+                        <label for="visa"><img src="/IMG/VISA.png" alt="VISA CARD"></label>
+                    </div>
+                    <div>
+                        <input type="radio" id="master" name="card-type">
+                        <label for="master"><img src="/IMG/master.png" alt="MASTER CARD"></label>
+                    </div>
+                </div>          
+                <div id="button-div">
+                    <button type="submit">SEND</button>
                     </button>
-                </div>
-            </form>
-        </section>
-        <section id="payment">
-
-        </section>
+                </div>           
+            </section>
+        </form>
+        
+        
     </div>
 
     <script type="module" src="js/main.js"></script>

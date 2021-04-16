@@ -119,10 +119,13 @@ window.cleanTroller = cleanTroller; //globalizing the function
 
 /***********************************************/
 
-/*******************Shop Functions**************/
+/*******************Address & Payment Functions**************/
 
-async function openShopPage(){
-    window.open('./shop.html','',);
+function AddressAndPaymentShow() {
+    
+    const element = document.querySelector('.addressandpayment')
+    element.style.visibility = 'visible'
 }
 
-window.openShopPage = openShopPage
+
+window.AddressAndPaymentShow = AddressAndPaymentShow;
